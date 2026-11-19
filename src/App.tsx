@@ -21,8 +21,8 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactTitle, setContactTitle] = useState('Давайте обсудим, какая помощь нужна');
 
-  function openContact(transport = false) {
-    setContactTitle(transport ? 'Заказать перевозку' : 'Давайте обсудим, какая помощь нужна');
+  function openContact(transport: boolean | 'monument' = false) {
+    setContactTitle(transport === 'monument' ? 'Заказать памятник' : transport ? 'Заказать перевозку' : 'Давайте обсудим, какая помощь нужна');
     setMenuOpen(false);
     dialog.current?.showModal();
   }
@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         <section className="approach section" id="approach">
-          <div className="approach-copy"><p className="eyebrow">НАШ ПОДХОД</p><h2>Когда важны<br /><em>участие и такт</em></h2><p className="body-copy">В такие моменты бывает сложно принимать решения. Мы предлагаем начать с разговора — спокойно обсудить вашу ситуацию, пожелания семьи и дальнейшие шаги.</p><ul className="principles"><li><Check size={17} /><div><h3>Внимание к пожеланиям</h3><p>Традиции и решения вашей семьи — основа прощания.</p></div></li><li><Check size={17} /><div><h3>Понятная последовательность</h3><p>Обсудим, что нужно сделать сейчас и что можно решить позже.</p></div></li><li><Check size={17} /><div><h3>Согласование деталей</h3><p>Состав услуг и стоимость обсудим до начала работ.</p></div></li></ul></div>
+          <div className="approach-copy"><p className="eyebrow">ПАМЯТНИКИ</p><h2>Сохраним память<br /><em>о дорогом человеке</em></h2><p className="body-copy">Обсудим памятник, который отразит ваши чувства и память о близком. Поможем определиться с формой, материалом и оформлением, согласуем детали и стоимость.</p><ul className="principles"><li><Check size={17} /><div><h3>Форма и материал</h3><p>Рассмотрим ваши пожелания к внешнему виду и размерам памятника.</p></div></li><li><Check size={17} /><div><h3>Портрет и памятная надпись</h3><p>Обсудим фотографию, имя, даты и слова, которые важно сохранить.</p></div></li><li><Check size={17} /><div><h3>Согласование деталей</h3><p>Стоимость, сроки и условия установки уточним до оформления заказа.</p></div></li></ul><button className="button gold monument-order" onClick={() => openContact('monument')}>Заказать памятник <ArrowUpRight size={18} /></button></div>
         </section>
 
 
@@ -135,7 +135,7 @@ export default function Home() {
         </div>
       </footer>
       <dialog ref={dialog} aria-labelledby="contact-title" className="contact-dialog" onClick={(event) => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
-        <button className="dialog-close" aria-label="Закрыть" onClick={() => dialog.current?.close()}><X /></button><p className="eyebrow">ЕКАТЕРИНБУРГ</p><h2 id="contact-title">{contactTitle}</h2><p>Выберите удобный способ связи. Для перевозки подготовьте адрес отправления и место назначения.</p><div className="dialog-options"><div><Phone size={23} /><strong>По телефону</strong><span>Номер будет добавлен</span></div><div><MessageCircle size={23} /><strong>В мессенджере</strong><span>Ссылка будет добавлена</span></div></div><p className="demo-note">Это предварительный макет. Приём обращений станет доступен после добавления контактов компании.</p><button className="button outline" onClick={() => dialog.current?.close()}>Вернуться на сайт</button>
+        <button className="dialog-close" aria-label="Закрыть" onClick={() => dialog.current?.close()}><X /></button><p className="eyebrow">ЕКАТЕРИНБУРГ</p><h2 id="contact-title">{contactTitle}</h2><p>{contactTitle === 'Заказать памятник' ? 'Расскажите о желаемой форме, материале и оформлении памятника. Если есть, подготовьте фотографию или пример.' : 'Выберите удобный способ связи. Для перевозки подготовьте адрес отправления и место назначения.'}</p><div className="dialog-options"><div><Phone size={23} /><strong>По телефону</strong><span>Номер будет добавлен</span></div><div><MessageCircle size={23} /><strong>В мессенджере</strong><span>Ссылка будет добавлена</span></div></div><p className="demo-note">Это предварительный макет. Приём обращений станет доступен после добавления контактов компании.</p><button className="button outline" onClick={() => dialog.current?.close()}>Вернуться на сайт</button>
       </dialog>
     </>
   );
