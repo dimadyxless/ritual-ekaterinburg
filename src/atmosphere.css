@@ -106,3 +106,14 @@ em { color:#654420; }
 .memory-image::after { background:linear-gradient(0deg,#ac773f44,transparent 60%); }
 .site-footer { background:linear-gradient(180deg,transparent,#c6975830 45%,#b7804455); }
 @media(max-width:1100px) { .hero-content { text-shadow:none; } }
+
+.monuments-intro { padding-top:65px; max-width:1180px; }
+.back-link { display:inline-block; margin-bottom:45px; color:#493015; }
+.monuments-intro h1 { max-width:850px; }
+.monuments-intro .body-copy { max-width:680px; font-size:20px; margin-bottom:32px; }
+.monuments-teaser { display:flex; align-items:center; justify-content:space-between; gap:55px; }
+.monuments-teaser .body-copy { max-width:650px; }
+.monuments-teaser .button { flex-shrink:0; }
+.navigation { gap:22px; }
+@media(max-width:1050px) { .navigation { gap:12px; } }
+@media(max-width:760px) { .monuments-teaser { flex-direction:column; align-items:flex-start; gap:28px; } .monuments-intro { padding-top:35px; } .monuments-intro .body-copy { font-size:18px; } .monuments-teaser .button { width:100%; } }
