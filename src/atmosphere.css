@@ -1,4 +1,4 @@
-/* Continuous warm plaster, charcoal stone and aged brass. */
+/* Continuous warm plaster and reference-inspired brushed bronze. */
 :root { --bg:#9d8971; --text:#29231d; --muted:#453b30; --gold:#705021; --line:#72502e40; }
 body {
  background-color:var(--bg);
@@ -84,3 +84,25 @@ em { color:#654420; }
 }
 
 .approach, .services, .steps-section, .faq-section { background: transparent; }
+
+/* Golden bronze sampled visually from the engraved stroke of the logo. */
+:root { --bronze-surface: linear-gradient(120deg,#efc48b 0%,#d8a463 42%,#b88042 100%); --bronze-ink:#38230f; }
+.site-header, .service-grid, .steps, .faq-list, .contact-dialog, .navigation.is-open {
+ background:var(--bronze-surface);
+ color:var(--bronze-ink);
+ border-color:#e9bc78;
+ box-shadow:0 15px 35px #79512726,inset 0 1px 0 #ffe3b7a0;
+}
+.site-header .brand small, .site-header .brand svg, .navigation,
+.service p, .steps p, .faq-list details p,
+.service-icon, .step-number, .faq-list summary svg { color:#493015; }
+.navigation a:hover { color:#704310; }
+.service, .service:first-child, .faq-list details, .step-number { border-color:#80532245; }
+.service:hover { background:#ffe5b52b; }
+.contact-dialog { --muted:#493015; --gold:#704310; --line:#80532245; }
+.contact-dialog::backdrop { background:#624321a6; }
+.hero-shade { background:linear-gradient(90deg,#79502775,#986a3530 35%,transparent 54%); }
+.hero-content { text-shadow:0 2px 12px #66411f; }
+.memory-image::after { background:linear-gradient(0deg,#ac773f44,transparent 60%); }
+.site-footer { background:linear-gradient(180deg,transparent,#c6975830 45%,#b7804455); }
+@media(max-width:1100px) { .hero-content { text-shadow:none; } }
