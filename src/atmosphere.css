@@ -1,105 +1,86 @@
-/* One shared surface under softly overlapping photographic scenes. */
+/* Continuous warm plaster, charcoal stone and aged brass. */
+:root { --bg:#9d8971; --text:#29231d; --muted:#453b30; --gold:#705021; --line:#72502e40; }
 body {
-  background-color: #0c0b09;
-  background-image:
-    radial-gradient(ellipse at 8% 35%, #744b251c, transparent 35%),
-    radial-gradient(ellipse at 95% 65%, #8b60261a, transparent 38%);
+ background-color:var(--bg);
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23847260' opacity='.2' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E"),radial-gradient(ellipse at 0 20%,#e6cba94d,transparent 60%);
+ background-size:180px 180px,100% 100%;
 }
-main { position: relative; isolation: isolate; }
-main > section, .site-footer { background-color: transparent; }
-.hero-image {
-  mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 190px), transparent 100%);
+main { position:relative; isolation:isolate; }
+main > section, .site-footer { background:transparent; }
+em { color:#654420; }
+.site-header { background:linear-gradient(110deg,#2d2925,#171614); color:#f3e7d4; border-bottom:1px solid #bd965c66; }
+.site-header .brand small, .site-header .brand svg { color:#cfb187; }
+.navigation { color:#e8dac6; }
+.hero { isolation:isolate; }
+.hero-art { position:absolute; inset:0; }
+.hero-image { mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%); }
+.hero-shade { background:linear-gradient(90deg,#17130e85,#17130e55 35%,transparent 54%); mask-image:linear-gradient(#000 60%,transparent); }
+.hero-content { color:#fff7e9; }
+.hero-content em { color:#eed1a8; }
+.hero-description,.hero-note { color:#f2e4d2; }
+.approach { min-height:0; grid-template-columns:1fr 1fr; align-items:center; gap:70px; padding-block:95px; }
+.memory-image { position:relative; inset:auto; z-index:auto; min-height:530px; border-radius:120px 120px 12px 12px; border:1px solid #d2b27e; box-shadow:18px 24px 55px #3b2b2340,inset 0 0 0 8px #cab08a; mask-image:none; }
+.memory-image img { object-position:28% center; filter:saturate(.45); }
+.memory-image::after { background:linear-gradient(0deg,#29231d55,transparent 60%); }
+.approach-copy { grid-column:2; text-shadow:none; padding-block:0; }
+.approach-copy h2 { text-shadow:none; }
+.approach-copy .body-copy,.principles p { color:var(--muted); }
+.section-heading,.faq-section > div,.steps-section .container { text-shadow:none; }
+.atmosphere-section::before,.services::before,.steps-section::before,.transport-section::before,.faq-section::before,.site-footer::before { content:none; }
+.services,.steps-section,.faq-section { padding-block:85px; }
+.service-grid,.steps,.faq-list {
+ background:radial-gradient(ellipse at top left,#53493b60,transparent 70%),linear-gradient(125deg,#292723,#181817);
+ color:#f3e7d4; border:1px solid #b69764; border-radius:14px;
+ box-shadow:0 22px 45px #43322235,inset 0 1px 0 #f5d29c30;
 }
-.hero-shade {
-  background: linear-gradient(90deg, #0c0b0930, #0c0b0920 42%, transparent 65%);
+.service-grid { overflow:hidden; }
+.service,.service:first-child { padding:34px 30px; background:transparent; border-color:#b6976438; }
+.service:hover { background:#c5a16b12; }
+.service p,.steps p,.faq-list details p { color:#d4c6b3; }
+.service-icon,.step-number,.faq-list summary svg { color:#d8b37a; }
+.steps { padding:40px; }
+.step-number { border-color:#b6976455; }
+.transport-section { position:relative; isolation:isolate; border:0; box-shadow:none; padding-block:110px; background:radial-gradient(ellipse at center,#e9cfac55,transparent 70%); }
+.transport-section p:last-child { color:var(--muted); }
+.faq-list { padding:10px 30px; }
+.faq-list details { border-color:#b6976438; }
+.faq-list details:last-child { border:0; }
+.site-footer { position:relative; isolation:isolate; border:0; box-shadow:none; padding-top:95px; background:linear-gradient(180deg,transparent,#493b2d26 45%,#30291f55); }
+.footer-grid { text-shadow:none; padding-bottom:65px; }
+.footer-grid .brand { color:#29231d; }
+.footer-grid .brand small,.footer-location,.footer-column > a,.footer-about > p,.footer-connect > p { color:#3d3024; }
+.footer-column h3 { color:#29231d; }
+.footer-column > a:hover { color:#694210; }
+.footer-bottom { background:transparent; text-shadow:none; color:#30271e; border-color:#63462755; }
+.footer-bottom a { color:#392b1a; }
+.contact-dialog { background:#26231f; color:#f3e7d4; border-radius:16px; --muted:#d4c6b3; --line:#b6976444; --gold:#d8b37a; }
+.navigation.is-open { background:#28241f; }
+@media(min-width:1101px) {
+ .hero { min-height:0; height:max(620px,50vw); }
+ .hero-image { object-position:center; }
+ .hero-content h1 { font-size:clamp(38px,3.25vw,62px); }
+ .hero-description { max-width:44%; }
 }
-.approach { background: transparent; }
-.memory-image {
-  top: -75px;
-  bottom: -75px;
-  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 78%, transparent);
+@media(max-width:1100px) {
+ .hero { display:block; min-height:0; }
+ .hero-art { position:relative; inset:auto; width:100%; aspect-ratio:1.05; overflow:hidden; }
+ .hero-art .hero-image { height:100%; width:100%; object-fit:cover; object-position:right center; opacity:1; mask-image:linear-gradient(to bottom,#000 0%,#000 84%,transparent 100%); }
+ .hero-art .hero-shade { display:none; }
+ .hero-content { padding-top:22px; padding-bottom:48px; color:#29231d; text-shadow:none; }
+ .hero-content em { color:#654420; }
+ .hero-description,.hero-note { color:#453b30; }
 }
-.memory-image::after {
-  background: linear-gradient(90deg, transparent 30%, #0c0b0930 49%, #0c0b09c4 75%, #0c0b0980);
-}
-.atmosphere-section { background: transparent; }
-.atmosphere-section::before {
-  inset: -80px 0;
-  background-image: linear-gradient(#0c0b092b, #0c0b092b), url('../public/images/section-architecture.webp');
-  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 76%, transparent);
-}
-.steps-section { border: 0; }
-.steps-section::before {
-  background-image: url('../public/images/steps-garden.webp');
-  background-position: center;
-  transform: none;
-  opacity: 1;
-}
-.transport-section {
-  position: relative;
-  isolation: isolate;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  padding-block: 100px;
-}
-.transport-section::before {
-  content: '';
-  position: absolute;
-  inset: -75px 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: linear-gradient(90deg, #0c0b09df, #0c0b0980 65%, #0c0b0960), url('../public/images/section-architecture.webp');
-  background-size: cover;
-  background-position: center;
-  mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 70%, transparent);
-}
-.faq-section { background: transparent; }
-.site-footer { background: transparent; box-shadow: none; border: 0; }
-.site-footer::before {
-  top: -105px;
-  background-image: linear-gradient(0deg, #080806b3, #08080655 40%, #08080655 75%, transparent), url('../public/images/footer-lantern.webp');
-  mask-image: linear-gradient(to bottom, transparent, #000 30%, #000);
-}
-@media (min-width: 761px) and (max-width: 1050px) {
-  .hero-shade { background: linear-gradient(90deg, #0c0b09a8, #0c0b0944 47%, transparent 80%); }
-}
-@media (max-width: 760px) {
-  .hero-shade { background: linear-gradient(90deg, #0c0b09d9, #0c0b0977); }
-  .hero-image { mask-image: linear-gradient(to bottom, #000, #000 72%, transparent); }
-  .memory-image { top: -30px; bottom: auto; height: 500px; mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 62%, transparent); }
-  .memory-image::after { background: linear-gradient(0deg, #0c0b0970, transparent 60%); }
-  .atmosphere-section::before { inset-block: -50px; }
-  .steps-section::before { background-position: 63% center; opacity: .85; }
-  .transport-section { padding-block: 70px; }
-  .site-footer::before { top: -70px; }
-}
-
-/* Keep the complete Pegasus scene above mobile copy, in normal document flow. */
-.hero-art { position: absolute; inset: 0; }
-@media (max-width: 760px) {
-  .hero { display: block; min-height: 0; }
-  .hero-art { position: relative; inset: auto; width: 100%; aspect-ratio: 1.1; overflow: hidden; }
-  .hero-art .hero-image { height: 100%; width: 100%; object-fit: cover; object-position: right center; opacity: 1; mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%); }
-  .hero-art .hero-shade { display: none; }
-  .hero-content { padding-top: 18px; padding-bottom: 28px; }
-  .hero-bottom { position: relative; inset: auto; padding-bottom: 28px; gap: 16px; }
-  .hero-bottom span { max-width: 245px; }
-  .hero-bottom a { flex-shrink: 0; }
+@media(max-width:760px) {
+ .approach { display:grid; grid-template-columns:1fr; gap:35px; padding:45px 20px 55px; }
+ .memory-image { height:340px; min-height:0; inset:auto; border-radius:80px 80px 12px 12px; }
+ .approach-copy { grid-column:auto; padding:0; }
+ .services,.steps-section,.faq-section { padding-block:55px; }
+ .service,.service:first-child { padding:28px 23px; }
+ .steps { padding:28px 20px; }
+ .transport-section { padding-block:65px; }
+ .site-footer { padding-top:55px; }
+ .footer-grid { padding-bottom:35px; }
+ .faq-list { padding-inline:20px; }
 }
 
-/* Approved plaster-wall artwork: keep the complete brand composition visible. */
-@media (min-width: 1101px) {
-  .hero { min-height: 0; height: max(620px, 50vw); }
-  .hero-image { object-position: center; }
-  .hero-content h1 { font-size: clamp(38px, 3.25vw, 62px); }
-  .hero-description { max-width: 44%; }
-  .hero-shade { background: linear-gradient(90deg, #0c0b0980, #0c0b0966 35%, transparent 54%); }
-}
-@media (max-width: 1100px) {
-  .hero { display: block; min-height: 0; }
-  .hero-art { position: relative; inset: auto; width: 100%; aspect-ratio: 1.05; overflow: hidden; }
-  .hero-art .hero-image { height: 100%; width: 100%; object-fit: cover; object-position: right center; opacity: 1; mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%); }
-  .hero-art .hero-shade { display: none; }
-  .hero-content { padding-top: 22px; padding-bottom: 48px; }
-}
+.approach, .services, .steps-section, .faq-section { background: transparent; }
