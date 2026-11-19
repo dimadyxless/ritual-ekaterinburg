@@ -64,7 +64,7 @@ export default function Home() {
 
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-art">
-            <img className="hero-image" src="./images/hero-belorechenskaya.png" alt="Золотая арка и чёрно-золотой логотип Белореченская 10 на фактурной стене" fetchPriority="high" />
+            <picture><source media="(max-width: 1100px)" srcSet="./images/hero-belorechenskaya-mobile.webp" /><img className="hero-image" width="1774" height="887" decoding="async" src="./images/hero-belorechenskaya-fast.webp" alt="Золотая арка и чёрно-золотой логотип Белореченская 10 на фактурной стене" fetchPriority="high" /></picture>
             <div className="hero-shade" />
           </div>
           <div className="hero-content container">

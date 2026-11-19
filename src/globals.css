@@ -273,7 +273,7 @@ h1 { font-size: clamp(44px, 4.2vw, 62px); line-height: 1.1; letter-spacing: -1px
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: linear-gradient(0deg, #0c0b09 0%, #0c0b092b 20%, #0c0b092b 78%, #0c0b09 100%), url('../public/images/section-architecture.webp');
+  background-image: linear-gradient(0deg, #0c0b09 0%, #0c0b092b 20%, #0c0b092b 78%, #0c0b09 100%);
   background-size: cover;
   background-position: center;
 }
@@ -286,7 +286,7 @@ h1 { font-size: clamp(44px, 4.2vw, 62px); line-height: 1.1; letter-spacing: -1px
 .steps-section { border: 0; padding-block: 120px; }
 .steps-section::before { transform: scaleX(-1); opacity: .75; background-position: center 40%; }
 .steps { padding: 32px; background: #100d0aca; box-shadow: 0 20px 70px #000b; border: 1px solid #b3996e26; }
-.transport-section { padding-block: 65px; background-image: linear-gradient(90deg, #0c0b09ed, #0c0b09a8 65%, #0c0b0960), url('../public/images/section-architecture.webp'); background-size: cover; background-position: center; box-shadow: 0 25px 90px #000e, 0 0 70px #a3732e12; }
+.transport-section { padding-block: 65px; background-image: linear-gradient(90deg, #0c0b09ed, #0c0b09a8 65%, #0c0b0960); background-size: cover; background-position: center; box-shadow: 0 25px 90px #000e, 0 0 70px #a3732e12; }
 .faq-section { padding-block: 120px; }
 .faq-section::before { background-position: center 70%; opacity: .8; }
 .faq-list { padding: 8px 30px; background: #0c0b09d9; border: 1px solid #b3996e25; box-shadow: 0 20px 70px #000d; }
@@ -388,7 +388,7 @@ h1 { font-size: clamp(44px, 4.2vw, 62px); line-height: 1.1; letter-spacing: -1px
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: linear-gradient(0deg, #080806b3 0%, #08080655 40%, #08080655 75%, #0c0b09 100%), url('../public/images/footer-lantern.webp');
+  background-image: linear-gradient(0deg, #080806b3 0%, #08080655 40%, #08080655 75%, #0c0b09 100%);
   background-size: cover;
   background-position: center 65%;
 }

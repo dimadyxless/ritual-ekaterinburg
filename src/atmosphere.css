@@ -117,3 +117,13 @@ em { color:#654420; }
 .navigation { gap:22px; }
 @media(max-width:1050px) { .navigation { gap:12px; } }
 @media(max-width:760px) { .monuments-teaser { flex-direction:column; align-items:flex-start; gap:28px; } .monuments-intro { padding-top:35px; } .monuments-intro .body-copy { font-size:18px; } .monuments-teaser .button { width:100%; } }
+
+/* Deep copper-brown gradient from the lower engraved logo detail. */
+:root { --bronze-surface:linear-gradient(120deg,#ac773d 0%,#875729 48%,#593619 100%); --bronze-ink:#fff3e1; }
+.site-header .brand small,.site-header .brand svg,.navigation,
+.service p,.steps p,.faq-list details p,.service-icon,.step-number,.faq-list summary svg { color:#fff0d9; }
+.navigation a:hover { color:#fff; }
+.contact-dialog { --muted:#fff0d9; --gold:#f3d2a0; --line:#f3d2a055; }
+.site-header,.service-grid,.steps,.faq-list,.contact-dialog,.navigation.is-open { border-color:#ce9c60; }
+.service,.service:first-child,.faq-list details,.step-number { border-color:#edc18a55; }
+.site-footer { background:linear-gradient(180deg,transparent,#8b5b3020 45%,#68411e45); }
