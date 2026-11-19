@@ -87,3 +87,19 @@ main > section, .site-footer { background-color: transparent; }
   .hero-bottom span { max-width: 245px; }
   .hero-bottom a { flex-shrink: 0; }
 }
+
+/* Approved plaster-wall artwork: keep the complete brand composition visible. */
+@media (min-width: 1101px) {
+  .hero { min-height: 0; height: max(620px, 50vw); }
+  .hero-image { object-position: center; }
+  .hero-content h1 { font-size: clamp(38px, 3.25vw, 62px); }
+  .hero-description { max-width: 44%; }
+  .hero-shade { background: linear-gradient(90deg, #0c0b0980, #0c0b0966 35%, transparent 54%); }
+}
+@media (max-width: 1100px) {
+  .hero { display: block; min-height: 0; }
+  .hero-art { position: relative; inset: auto; width: 100%; aspect-ratio: 1.05; overflow: hidden; }
+  .hero-art .hero-image { height: 100%; width: 100%; object-fit: cover; object-position: right center; opacity: 1; mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%); }
+  .hero-art .hero-shade { display: none; }
+  .hero-content { padding-top: 22px; padding-bottom: 48px; }
+}

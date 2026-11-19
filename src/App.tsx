@@ -43,7 +43,7 @@ export default function Home() {
       <main id="main">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-art">
-            <img className="hero-image" src="./images/hero-pegasus.png" alt="Белый пегас с колесницей в золотом кольце среди облаков и архитектурных арок" fetchPriority="high" />
+            <img className="hero-image" src="./images/hero-belorechenskaya.png" alt="Золотая арка и чёрно-золотой логотип Белореченская 10 на фактурной стене" fetchPriority="high" />
             <div className="hero-shade" />
           </div>
           <div className="hero-content container">
