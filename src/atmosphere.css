@@ -161,3 +161,11 @@ em,.hero-content em { color:#e1c395; }
 .approach-copy > .principles { grid-column:2; grid-row:2/4; margin:0; }
 .approach-copy > .principles li:first-child { margin-top:0; }
 @media(max-width:760px) { .approach-copy { display:block; } .approach-copy > .principles { margin-top:30px; } }
+/* The supplied hero-wall texture is shared by every page and closing section. */
+body {
+ background-color:#8c7359;
+ background-image:url('../public/images/wall-texture.webp');
+ background-size:273px 601px;
+ background-repeat:repeat;
+}
+.transport-section,.site-footer { background:transparent; }
