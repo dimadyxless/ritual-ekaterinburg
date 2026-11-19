@@ -174,3 +174,11 @@ body::before {
 .transport-section,.site-footer { background:transparent; }
 
 @media(max-width:760px) { body::before { background-position:15% center; } }
+/* Reference marble replaces the former bronze panel surfaces. */
+.site-header,.service-grid,.steps,.faq-list,.contact-dialog,.navigation.is-open {
+ background-color:#211e18;
+ background-image:linear-gradient(115deg,#29211710,#100e0c20),url('../public/images/dark-gold-marble.webp');
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
