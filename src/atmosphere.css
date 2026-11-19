@@ -2,7 +2,7 @@
 :root { --bg:#9d8971; --text:#29231d; --muted:#453b30; --gold:#705021; --line:#72502e40; }
 body {
  background-color:var(--bg);
- background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23847260' opacity='.2' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E"),radial-gradient(ellipse at 0 20%,#e6cba94d,transparent 60%);
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23847260' opacity='.2' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E"),radial-gradient(ellipse at 0 20%,#b18c6320,transparent 60%);
  background-size:180px 180px,100% 100%;
 }
 main { position:relative; isolation:isolate; }
@@ -127,3 +127,27 @@ em { color:#654420; }
 .site-header,.service-grid,.steps,.faq-list,.contact-dialog,.navigation.is-open { border-color:#ce9c60; }
 .service,.service:first-child,.faq-list details,.step-number { border-color:#edc18a55; }
 .site-footer { background:linear-gradient(180deg,transparent,#8b5b3020 45%,#68411e45); }
+
+/* Aged bronze and a continuous shaded wall, without the pale sand band. */
+:root {
+ --bg:#65513e; --text:#f5ead9; --muted:#e0d0b9; --gold:#d3b182;
+ --bronze-surface:linear-gradient(115deg,#746047 0%,#57432e 48%,#3e3023 100%);
+ --bronze-ink:#f5ead9;
+}
+body { background-color:var(--bg); }
+em,.hero-content em { color:#e1c395; }
+.site-header,.service-grid,.steps,.faq-list,.contact-dialog,.navigation.is-open {
+ border-color:#b08b585e; box-shadow:0 15px 35px #30231726,inset 0 1px 0 #d4b78a30;
+}
+.hero-image { mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%); }
+.transport-section { background:radial-gradient(ellipse at center,#c2986520,transparent 70%); }
+.site-footer { background:linear-gradient(180deg,transparent,#3e30232b 50%,#33281e70); }
+.footer-grid .brand,.footer-column h3,.footer-bottom,.footer-bottom a,.back-link { color:#f0dfc7; }
+.footer-grid .brand small,.footer-location,.footer-column > a,.footer-about > p,.footer-connect > p { color:#e0cbb0; }
+.footer-column > a:hover { color:#fff0d9; }
+.footer-bottom { border-color:#cfac7840; }
+@media(max-width:1100px) {
+ .hero-content { color:#f5ead9; }
+ .hero-content em { color:#e1c395; }
+ .hero-description,.hero-note { color:#e0d0b9; }
+}
