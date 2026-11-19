@@ -212,3 +212,6 @@ body::before {
  .header-contact { min-width:104px; }
  .hero .gold { font-size:20px; padding-inline:12px; gap:10px; }
 }
+
+@media(max-width:760px) { .site-header .brand span { max-width:135px; font-size:17px; } }
+@media(max-width:380px) { .site-header .brand span { font-size:16px; } }

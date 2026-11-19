@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <a className="skip-link" href="#main">Перейти к содержанию</a>
       <header className="site-header">
-        <a className="brand" href="./" aria-label="Ритуальная помощь — на главную"><Flower2 size={32} strokeWidth={1} /><span>Ритуальная помощь<small>ЕКАТЕРИНБУРГ</small></span></a>
+        <a className="brand" href="./" aria-label="Белореченская 10 — на главную"><Flower2 size={32} strokeWidth={1} /><span>Белореченская 10<small>ЕКАТЕРИНБУРГ</small></span></a>
         <nav aria-label="Основная навигация" className={menuOpen ? 'navigation is-open' : 'navigation'}>
           <a href="./monuments.html">Памятники</a>
           <a href={isMonuments ? './#services' : '#services'} onClick={() => setMenuOpen(false)}>Услуги</a>
@@ -84,11 +84,6 @@ export default function Home() {
           <div className="section-heading"><div><p className="eyebrow">ПОМОЩЬ И ПОДДЕРЖКА</p><h2>Возьмём на себя<br /><em>организационные заботы</em></h2></div><p className="section-intro">Вы можете обратиться за отдельной услугой<br />или обсудить организацию прощания целиком.</p></div>
           <div className="service-grid">{services.map(({ title, text, icon: Icon }, index) => <button className="service" key={title} onClick={() => openContact(index === 0)}><Icon className="service-icon" size={32} strokeWidth={1.1} /><h3>{title}</h3><p>{text}</p><span className="service-action">Обсудить услугу <ArrowUpRight size={18} /></span></button>)}</div>
         </section>
-
-        <section className="monuments-teaser container section">
-          <div><p className="eyebrow">ПАМЯТНИКИ</p><h2>Сохранить память <em>о близком</em></h2><p className="body-copy">Форма, материал, портрет и памятная надпись — расскажите, какое оформление вам близко. Детали можно обсудить с нами.</p></div>
-          <a className="button gold" href="./monuments.html">Подробнее о памятниках <ArrowUpRight size={18} /></a>
-        </section>
         <section className="steps-section section atmosphere-section"><div className="container"><p className="eyebrow">С ЧЕГО НАЧАТЬ</p><h2>Вам достаточно <em>связаться с нами</em></h2><div className="steps"><article><span className="step-number">01</span><h3>Расскажите о ситуации</h3><p>Позвоните или напишите.<br />Начнём с того, какая помощь нужна.</p></article><article><span className="step-number">02</span><h3>Обсудим детали</h3><p>Уточним пожелания, адреса,<br />сроки и состав услуг.</p></article><article><span className="step-number">03</span><h3>Согласуем порядок работы</h3><p>Определим стоимость<br />и последовательность действий.</p></article></div></div></section>
 
         <section className="transport-section"><div><p className="eyebrow">ПЕРЕВОЗКА В ЕКАТЕРИНБУРГЕ</p><h2>Помощь начинается<br /><em>с одного обращения</em></h2><p>Сообщите адрес и нужный маршрут.<br />Остальные детали обсудим вместе.</p></div><button className="button gold" onClick={() => openContact(true)}><Truck size={19} /> Заказать перевозку <ArrowUpRight size={18} /></button></section>
@@ -100,9 +95,9 @@ export default function Home() {
       <footer className="site-footer" id="contacts">
         <div className="container footer-grid">
           <div className="footer-about">
-            <a className="brand" href="./" aria-label="Ритуальная помощь — на главную">
+            <a className="brand" href="./" aria-label="Белореченская 10 — на главную">
               <Flower2 size={32} strokeWidth={1} />
-              <span>Ритуальная помощь<small>ЕКАТЕРИНБУРГ</small></span>
+              <span>Белореченская 10<small>ЕКАТЕРИНБУРГ</small></span>
             </a>
             <p>С вниманием к людям.<br />С уважением к памяти.</p>
             <span className="footer-location"><MapPin size={15} /> Екатеринбург</span>
@@ -129,8 +124,8 @@ export default function Home() {
           </div>
         </div>
         <div className="container footer-bottom">
-          <span>© 2026 Ритуальная помощь · Екатеринбург</span>
-          <span>Предварительный макет. Название и услуги уточняются.</span>
+          <span>© 2026 Белореченская 10 · Екатеринбург</span>
+          <span>Предварительный макет. Услуги уточняются.</span>
           <a href="#">Наверх <ArrowUpRight size={15} /></a>
         </div>
       </footer>
