@@ -76,7 +76,6 @@ export default function Home() {
         </section>
 
         <section className="approach section" id="approach">
-          <div className="memory-image"><img src="./images/book-atmosphere.webp" loading="lazy" alt="Раскрытая старинная книга на деревянном столе в золотом боковом свете и глубоких тенях" /></div>
           <div className="approach-copy"><p className="eyebrow">НАШ ПОДХОД</p><h2>Когда важны<br /><em>участие и такт</em></h2><p className="body-copy">В такие моменты бывает сложно принимать решения. Мы предлагаем начать с разговора — спокойно обсудить вашу ситуацию, пожелания семьи и дальнейшие шаги.</p><ul className="principles"><li><Check size={17} /><div><h3>Внимание к пожеланиям</h3><p>Традиции и решения вашей семьи — основа прощания.</p></div></li><li><Check size={17} /><div><h3>Понятная последовательность</h3><p>Обсудим, что нужно сделать сейчас и что можно решить позже.</p></div></li><li><Check size={17} /><div><h3>Согласование деталей</h3><p>Состав услуг и стоимость обсудим до начала работ.</p></div></li></ul></div>
         </section>
 

@@ -151,3 +151,13 @@ em,.hero-content em { color:#e1c395; }
  .hero-content em { color:#e1c395; }
  .hero-description,.hero-note { color:#e0d0b9; }
 }
+
+/* Text-only approach section after removal of the book illustration. */
+.approach { display:block; }
+.approach-copy { display:grid; grid-template-columns:1fr 1fr; column-gap:70px; align-items:start; }
+.approach-copy > .eyebrow { grid-column:1/-1; }
+.approach-copy > h2 { grid-column:1; grid-row:2; }
+.approach-copy > .body-copy { grid-column:1; grid-row:3; }
+.approach-copy > .principles { grid-column:2; grid-row:2/4; margin:0; }
+.approach-copy > .principles li:first-child { margin-top:0; }
+@media(max-width:760px) { .approach-copy { display:block; } .approach-copy > .principles { margin-top:30px; } }
