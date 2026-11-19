@@ -165,7 +165,9 @@ em,.hero-content em { color:#e1c395; }
 body {
  background-color:#8c7359;
  background-image:url('../public/images/wall-texture.webp');
- background-size:273px 601px;
- background-repeat:repeat;
+ background-size:cover;
+ background-position:center;
+ background-attachment:fixed;
+ background-repeat:no-repeat;
 }
 .transport-section,.site-footer { background:transparent; }
