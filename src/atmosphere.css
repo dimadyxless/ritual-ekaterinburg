@@ -1,0 +1,89 @@
+/* One shared surface under softly overlapping photographic scenes. */
+body {
+  background-color: #0c0b09;
+  background-image:
+    radial-gradient(ellipse at 8% 35%, #744b251c, transparent 35%),
+    radial-gradient(ellipse at 95% 65%, #8b60261a, transparent 38%);
+}
+main { position: relative; isolation: isolate; }
+main > section, .site-footer { background-color: transparent; }
+.hero-image {
+  mask-image: linear-gradient(to bottom, #000 0%, #000 calc(100% - 190px), transparent 100%);
+}
+.hero-shade {
+  background: linear-gradient(90deg, #0c0b0930, #0c0b0920 42%, transparent 65%);
+}
+.approach { background: transparent; }
+.memory-image {
+  top: -75px;
+  bottom: -75px;
+  mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 78%, transparent);
+}
+.memory-image::after {
+  background: linear-gradient(90deg, transparent 30%, #0c0b0930 49%, #0c0b09c4 75%, #0c0b0980);
+}
+.atmosphere-section { background: transparent; }
+.atmosphere-section::before {
+  inset: -80px 0;
+  background-image: linear-gradient(#0c0b092b, #0c0b092b), url('../public/images/section-architecture.webp');
+  mask-image: linear-gradient(to bottom, transparent, #000 22%, #000 76%, transparent);
+}
+.steps-section { border: 0; }
+.steps-section::before {
+  background-image: url('../public/images/steps-garden.webp');
+  background-position: center;
+  transform: none;
+  opacity: 1;
+}
+.transport-section {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-block: 100px;
+}
+.transport-section::before {
+  content: '';
+  position: absolute;
+  inset: -75px 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(90deg, #0c0b09df, #0c0b0980 65%, #0c0b0960), url('../public/images/section-architecture.webp');
+  background-size: cover;
+  background-position: center;
+  mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 70%, transparent);
+}
+.faq-section { background: transparent; }
+.site-footer { background: transparent; box-shadow: none; border: 0; }
+.site-footer::before {
+  top: -105px;
+  background-image: linear-gradient(0deg, #080806b3, #08080655 40%, #08080655 75%, transparent), url('../public/images/footer-lantern.webp');
+  mask-image: linear-gradient(to bottom, transparent, #000 30%, #000);
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .hero-shade { background: linear-gradient(90deg, #0c0b09a8, #0c0b0944 47%, transparent 80%); }
+}
+@media (max-width: 760px) {
+  .hero-shade { background: linear-gradient(90deg, #0c0b09d9, #0c0b0977); }
+  .hero-image { mask-image: linear-gradient(to bottom, #000, #000 72%, transparent); }
+  .memory-image { top: -30px; bottom: auto; height: 500px; mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 62%, transparent); }
+  .memory-image::after { background: linear-gradient(0deg, #0c0b0970, transparent 60%); }
+  .atmosphere-section::before { inset-block: -50px; }
+  .steps-section::before { background-position: 63% center; opacity: .85; }
+  .transport-section { padding-block: 70px; }
+  .site-footer::before { top: -70px; }
+}
+
+/* Keep the complete Pegasus scene above mobile copy, in normal document flow. */
+.hero-art { position: absolute; inset: 0; }
+@media (max-width: 760px) {
+  .hero { display: block; min-height: 0; }
+  .hero-art { position: relative; inset: auto; width: 100%; aspect-ratio: 1.1; overflow: hidden; }
+  .hero-art .hero-image { height: 100%; width: 100%; object-fit: cover; object-position: right center; opacity: 1; mask-image: linear-gradient(to bottom, #000 0%, #000 90%, transparent 100%); }
+  .hero-art .hero-shade { display: none; }
+  .hero-content { padding-top: 18px; padding-bottom: 28px; }
+  .hero-bottom { position: relative; inset: auto; padding-bottom: 28px; gap: 16px; }
+  .hero-bottom span { max-width: 245px; }
+  .hero-bottom a { flex-shrink: 0; }
+}
